@@ -1,5 +1,5 @@
 class SpamType < ApplicationRecord
-  has_many :emails
-  has_many :victims, through: :emails
-  has_many :users, through: :emails
+  has_many :spam_emails
+  has_many :victims, through: :spam_emails
+  has_many :users, through: :spam_emails
 end

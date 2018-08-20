@@ -1,4 +1,4 @@
 class Victim < ApplicationRecord
-  has_many :emails
-  has_many :users, through: :emails
+  has_many :spam_emails
+  has_many :users, through: :spam_emails
 end

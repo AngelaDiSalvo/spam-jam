@@ -12,24 +12,24 @@
 
 ActiveRecord::Schema.define(version: 2018_08_20_213221) do
 
-  create_table "emails", force: :cascade do |t|
-    t.string "contents"
-    t.integer "user_id"
-    t.integer "victim_id"
-    t.integer "spam_type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["spam_type_id"], name: "index_emails_on_spam_type_id"
-    t.index ["user_id"], name: "index_emails_on_user_id"
-    t.index ["victim_id"], name: "index_emails_on_victim_id"
-  end
-
   create_table "fake_emails", force: :cascade do |t|
     t.string "email"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_fake_emails_on_user_id"
+  end
+
+  create_table "spam_emails", force: :cascade do |t|
+    t.string "contents"
+    t.integer "user_id"
+    t.integer "victim_id"
+    t.integer "spam_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spam_type_id"], name: "index_spam_emails_on_spam_type_id"
+    t.index ["user_id"], name: "index_spam_emails_on_user_id"
+    t.index ["victim_id"], name: "index_spam_emails_on_victim_id"
   end
 
   create_table "spam_types", force: :cascade do |t|

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :emails
+  has_many :spam_emails
   has_many :fake_emails
-  has_many :victims, through: :emails
+  has_many :victims, through: :spam_emails
 end
