@@ -13,10 +13,7 @@
   <tbody>
     <% @spam_emails.each do |spam_email| %>
       <tr>
-        <td><%= spam_email.contents %></td>
-        <td><%= link_to 'Show', spam_email %></td>
-        <td><%= link_to 'Edit', edit_spam_email_path(spam_email) %></td>
-        <td><%= link_to 'Destroy', spam_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to spam_email.contents, spam_email %></td>
       </tr>
     <% end %>
   </tbody>

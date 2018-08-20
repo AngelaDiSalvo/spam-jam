@@ -7,8 +7,7 @@
 
 <p>
   <strong>Real email:</strong>
-  <%= @victim.real_email %>
+  <%= mail_to @victim.real_email %>
 </p>
 
-<%= link_to 'Edit', edit_victim_path(@victim) %> |
 <%= link_to 'Back', victims_path %>

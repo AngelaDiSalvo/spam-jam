@@ -13,10 +13,7 @@
   <tbody>
     <% @fake_emails.each do |fake_email| %>
       <tr>
-        <td><%= fake_email.email %></td>
-        <td><%= link_to 'Show', fake_email %></td>
-        <td><%= link_to 'Edit', edit_fake_email_path(fake_email) %></td>
-        <td><%= link_to 'Destroy', fake_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to fake_email.email, fake_email %></td>
       </tr>
     <% end %>
   </tbody>

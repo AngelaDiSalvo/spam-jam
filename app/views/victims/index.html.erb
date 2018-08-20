@@ -14,11 +14,8 @@
   <tbody>
     <% @victims.each do |victim| %>
       <tr>
-        <td><%= victim.name %></td>
-        <td><%= victim.real_email %></td>
-        <td><%= link_to 'Show', victim %></td>
-        <td><%= link_to 'Edit', edit_victim_path(victim) %></td>
-        <td><%= link_to 'Destroy', victim, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to victim.name, victim %></td>
+        <td><%= mail_to victim.real_email %></td>
       </tr>
     <% end %>
   </tbody>

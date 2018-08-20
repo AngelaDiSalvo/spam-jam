@@ -1,5 +1,5 @@
 class VictimsController < ApplicationController
-  before_action :set_victim, only: [:show, :edit, :update, :destroy]
+  before_action :set_victim, only: [:show]
 
   def index
     @victims = Victim.all
