@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contents:</strong>
+  <%= @spam_email.contents %>
+</p>
+
+<%= link_to 'Edit', edit_spam_email_path(@spam_email) %> |
+<%= link_to 'Back', spam_emails_path %>

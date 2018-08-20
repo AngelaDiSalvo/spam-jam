@@ -1,0 +1,22 @@
+<%= form_with(model: spam_email, local: true) do |form| %>
+  <% if spam_email.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spam_email.errors.count, "error") %> prohibited this spam_email from being saved:</h2>
+
+      <ul>
+      <% spam_email.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :contents %>
+    <%= form.text_field :contents %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spam Emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contents</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spam_emails.each do |spam_email| %>
+      <tr>
+        <td><%= spam_email.contents %></td>
+        <td><%= link_to 'Show', spam_email %></td>
+        <td><%= link_to 'Edit', edit_spam_email_path(spam_email) %></td>
+        <td><%= link_to 'Destroy', spam_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spam Email', new_spam_email_path %>
