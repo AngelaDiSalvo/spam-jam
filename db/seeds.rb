@@ -16,9 +16,10 @@ end
 
 5.times do
   SpamType.create(name: Faker::Food.dish)
+end
 
 10.times do
-  Email.create(contents: Faker::Lorem.sentence(5), user_id: Faker::Number.between(1,3), victim_id: Faker::Number.between(1,4), spam_type_id: Faker::Number.between(1,5))
+  SpamEmail.create(contents: Faker::Lorem.sentence(5), user_id: Faker::Number.between(1,3), victim_id: Faker::Number.between(1,4), spam_type_id: Faker::Number.between(1,5))
 end
 
 10.times do
