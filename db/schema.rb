@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_213221) do
 
   create_table "victims", force: :cascade do |t|
     t.string "name"
-    t.string "email"
+    t.string "real_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
