@@ -15,7 +15,7 @@ end
 end
 
 5.times do
-  SpamType.create(name: Faker::Food.dish)
+  SpamType.create(name: Faker::Food.dish, template: Faker::Lorem.sentence(20))
 end
 
 10.times do

@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_213221) do
 
   create_table "spam_types", force: :cascade do |t|
     t.string "name"
+    t.string "template"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
