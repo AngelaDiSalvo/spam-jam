@@ -30,17 +30,14 @@ class SpamEmailsController < ApplicationController
 
     @spam_email = SpamEmail.create(contents: params[:spam_email][:contents] , user_id: @user.id , victim_id: @victim.id , spam_type_id: @spam_type.id)
 
-    redirect_to spam_email_path
 
-    # respond_to do |format|
-    #   if @spam_email.save
-    #     format.html { redirect_to @spam_email, notice: 'Spam email was successfully created.' }
-    #     format.json { render :show, status: :created, location: @spam_email }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @spam_email.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    respond_to do |format|
+      if @spam_email.valid? && @user.valid? && @victim.valid?
+        format.html { render :confirm, notice: 'Spam email was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   private

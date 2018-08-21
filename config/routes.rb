@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   get '/', to: 'spam_emails#welcome'
 
   resources :spam_emails
-  resources :fake_emails
-  resources :spam_types
-  resources :users
-  resources :victims
+  resources :fake_emails, only: [:index, :show]
+  resources :spam_types, only: [:index, :show]
+  resources :users, only: [:index, :show]
+  resources :victims, only: [:index, :show]
 
 end
