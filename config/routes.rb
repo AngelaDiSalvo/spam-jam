@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/new/1', to: 'spam_emails#new1'
-  get '/new/2', to: 'spam_emails#new'
+  get '/new/2', to: 'spam_emails#dog'
   post '/new/2', to: 'spam_emails#new'
 
   resources :spam_emails

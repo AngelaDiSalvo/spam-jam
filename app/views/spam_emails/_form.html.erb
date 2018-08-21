@@ -27,13 +27,9 @@
 
   <div class="field">
     <%= form.label :contents %>
-    <%= form.text_field :contents %>
+    <%= form.text_field :contents, value: @spam_type[:template]  %>
   </div>
 
-  <div class="field">
-    <%= form.label :spam_type %>
-    <%= form.collection_select :spam_type_id, SpamType.all, :id, :name %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
