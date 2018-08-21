@@ -30,7 +30,7 @@ class SpamEmailsController < ApplicationController
 
     @spam_email = SpamEmail.create(contents: params[:spam_email][:contents] , user_id: @user.id , victim_id: @victim.id , spam_type_id: @spam_type.id)
 
-    redirect_to @spam_email
+    redirect_to spam_email_path
 
     # respond_to do |format|
     #   if @spam_email.save

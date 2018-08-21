@@ -8,26 +8,8 @@ class VictimsController < ApplicationController
   def show
   end
 
-  def new
-    @victim = Victim.new
-  end
-
-  def create
-    @victim = Victim.new(victim_params)
-
-    respond_to do |format|
-      if @victim.save
-        format.html { redirect_to @victim, notice: 'Victim was successfully created.' }
-        format.json { render :show, status: :created, location: @victim }
-      else
-        format.html { render :new }
-        format.json { render json: @victim.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   def bam
-
+    render :bam
   end
 
   private
