@@ -26,6 +26,10 @@ class VictimsController < ApplicationController
     end
   end
 
+  def bam
+
+  end
+
   private
 
     def set_victim
