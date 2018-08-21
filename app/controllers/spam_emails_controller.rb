@@ -9,10 +9,11 @@ class SpamEmailsController < ApplicationController
   end
 
   def new1
-  
+
   end
 
   def new
+    byebug
     @spam_type = SpamType.find(params[:id])
     @spam_email = SpamEmail.new
   end
