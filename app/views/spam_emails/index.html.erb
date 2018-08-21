@@ -13,7 +13,10 @@
   <tbody>
     <% @spam_emails.each do |spam_email| %>
       <tr>
-        <td><%= link_to spam_email.contents, spam_email %></td>
+        <td><%= link_to spam_email.contents[0..20], spam_email %></td>
+        <td><%= link_to spam_email.user.name, user_path(spam_email.user) %></td>
+        <td><%= link_to spam_email.victim.name, victim_path(spam_email.victim) %></td>
+        <td><%= spam_email.spam_type.name %></td>
       </tr>
     <% end %>
   </tbody>
