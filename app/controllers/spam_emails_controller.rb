@@ -33,6 +33,7 @@ class SpamEmailsController < ApplicationController
 
     respond_to do |format|
       if @spam_email.valid? && @user.valid? && @victim.valid?
+        SpamEmailMailer.with(victim: @victim).send_spam_email.deliver_now
         format.html { render :confirm, notice: 'Spam email was successfully created.' }
       else
         format.html { render :new }
