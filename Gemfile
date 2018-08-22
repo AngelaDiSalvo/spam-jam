@@ -7,6 +7,8 @@ gem 'faker'
 gem 'gizoogle'
 gem 'mailgun-ruby'
 gem 'figaro'
+gem 'bootstrap'
+gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
