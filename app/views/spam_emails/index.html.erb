@@ -23,5 +23,9 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
+
+<p>Favorite Spam Type: <%= @spam_emails.favorite_type[0].name %>
+<br>
+Times Sent: <%= @spam_emails.favorite_type[1] %></p>
+<p>Total Emails Sent: <%= @spam_emails.total %></p>
