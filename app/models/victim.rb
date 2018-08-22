@@ -4,4 +4,6 @@ class Victim < ApplicationRecord
 
   validates :real_email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
+
+
 end

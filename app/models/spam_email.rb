@@ -15,4 +15,12 @@ class SpamEmail < ApplicationRecord
     SpamEmail.all.length
   end
 
+  def self.saddest
+    new_hash = Hash.new(0)
+    SpamEmail.all.each do |email|
+      new_hash[email.victim] += 1
+    end
+    new_hash.max_by{|k,v| v}
+  end
+
 end
