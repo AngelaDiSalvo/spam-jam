@@ -30,11 +30,20 @@ class SpamEmailsController < ApplicationController
 
     @spam_email = SpamEmail.create(contents: params[:spam_email][:contents] , user_id: @user.id , victim_id: @victim.id , spam_type_id: @spam_type.id)
 
+    @num_emails = params[:spam_email][:num_emails].to_i
+
 
     respond_to do |format|
       if @spam_email.valid? && @user.valid? && @victim.valid?
-        SpamEmailMailer.with(victim: @victim).punch1(@victim).deliver_now
-        format.html { render :confirm, notice: 'Spam email was successfully created.' }
+
+        if !@num_emails.nil? #COME BACK HERE
+          #do the thing multipunch
+          SpamEmailMailer.multipunch(@num_emails,@victim,@spam_email,@user).deliver_now
+          format.html { render :confirm, notice: 'Spam email was successfully created.' }
+        else
+          SpamEmailMailer.punch1(@victim,@spam_email,@user).deliver_now
+          format.html { render :confirm, notice: 'Spam email was successfully created.' }
+        end
       else
         format.html { render :new }
       end

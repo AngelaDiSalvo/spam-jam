@@ -48,7 +48,7 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
   - Ug lee
   Administration Consultant Guru
   999-99-99999-9-92 Uganda
-  thefuck you write these addresses")
+  how you write these addresses")
 
   SpamType.create(name: "FBI/CIA/IRS Arrest Warrant" , template:" Dear Sir or Madame,
     since your transaction of $1M USD has fallen through, the FBI has issued a warrant for your arrest for fradulent fund abuse(?) You need to act fast or agents will descend onto your household and destroy all your fine china. You wouldn't want that would you?
@@ -60,7 +60,7 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
     You have 48 hours before the ninjas come get you.")
 
   SpamType.create(name: "Thirsty Code Camp" , template:"Hello Prospective Student,
-    DevBasement has had the best record of awesome stuff related to coding. What's that? You want FULL STACK training? well we got STACKS! ALL THE STACKS! Our instructors are the most STACKED in the industry! Our codebase extends well beyong Java, C++, Ruby, C#... We at DevBasement teach practical code approaches such as PROFANITY and NOT-GIVING-A-FUCK-ABOUT-BUGS v.2.3s. Come join us
+    DevBasement has had the best record of awesome stuff related to coding. What's that? You want FULL STACK training? well we got STACKS! ALL THE STACKS! Our instructors are the most STACKED in the industry! Our codebase extends well beyong Java, C++, Ruby, C#... We at DevBasement teach practical code approaches such as PROFANITY and NOT-GIVING-A-****-ABOUT-BUGS v.2.3s. Come join us
 
     We will need the following:
     TELEPHONE
@@ -69,9 +69,9 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
     FIRSTBORN
     YOUR OLD BATH WATER (for immersion)
 
-    Start YOUR coding journey off strong. Learn things like How-to-win-at-arguements and Slack. We will slack off so hard even your future employers will think that you program like the undead. 120% program approval rating. such good. wow. learn to fuckshit-stack today!
+    Start YOUR coding journey off strong. Learn things like How-to-win-at-arguements and Slack. We will slack off so hard even your future employers will think that you program like the undead. 120% program approval rating. such good. wow. learn to united states of stack today!
 
-    <%= link_to 'Start Slacking Hard Today!', url: 'spam-jam.herokuapp.com/bam' %>
+    <a href='spamjam.herokuapp.com/bam'>Start Slacking Hard Today!</a>
 
     DevBasement School
     some hole in the ground

@@ -1,14 +1,22 @@
 class SpamEmailMailer < ApplicationMailer
   default from: 'test@example.com'
 
-  def punch1(victim)
+  def punch1(victim, spam, user)
+
     @victim = victim
-    mail(to: params[:victim][:real_email], subject: "test")
+    @spam_email = spam
+    @user = user
+    mg_client = Mailgun::Client.new(ENV['my_api_key'])#FIND A WAY TO REFERENCE THIS FROM SOMEWHERE
+    mg_client.send_message("sandbox09ad64ae576541848271448458e3a734.mailgun.org", {from: Faker::Internet.email,to: @victim.real_email, subject: Faker::BackToTheFuture.quote, html: @spam_email.contents})
+    # mail(from: @user.real_email,to: @victim.real_email, subject: "test", text: @spam_email.contents)
   end
 
-  def multipunch(int, victim)
+  def multipunch(int, victim, spam, user)
+
     int.times do
-      punch1(victim)
+      #sleep(5)
+
+      punch1(victim, spam, user)
     end
   end
 end

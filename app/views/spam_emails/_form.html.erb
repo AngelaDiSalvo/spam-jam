@@ -30,6 +30,10 @@
     <%= form.text_area :contents, size: "100x35", value: @spam_type[:template]  %>
   </div>
 
+  <div class="field">
+    <%= form.label "# of emails"%>
+    <%= form.number_field :num_emails %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

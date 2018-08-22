@@ -34,10 +34,10 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.delivery_method = :mailgun
-config.action_mailer.mailgun_settings = {
-  api_key: ENV['api_key'],
-  domain: ENV['domain'],
-}
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV['my_api_key'] ,
+    domain: 'spamjam.herokuapp.com/'
+  }
 
   config.action_mailer.perform_caching = false
 
