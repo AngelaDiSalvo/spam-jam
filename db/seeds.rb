@@ -14,9 +14,9 @@ end
   Victim.create(name: Faker::Name.name, real_email: Faker::Internet.email)
 end
 
-5.times do
-  SpamType.create(name: Faker::Food.dish, template: Faker::Lorem.sentence(20))
-end
+# 5.times do
+#   SpamType.create(name: Faker::Food.dish, template: Faker::Lorem.sentence(20))
+# end
 
 10.times do
   SpamEmail.create(contents: Faker::Lorem.sentence(5), user_id: Faker::Number.between(1,3), victim_id: Faker::Number.between(1,4), spam_type_id: Faker::Number.between(1,5))
@@ -79,4 +79,5 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
 
   SpamType.create(name: "The Hookup Trap" , template: " Hey bb I thot ur cutexxx xoxoxo I am lonely please check out my insecurities here:<%= link_to 'Click For Pics!', url: 'spam-jam.herokuapp.com/bam' %> I wanna pour strawberry limeade all over you. let's talk mmmk xxxxoxoxoxxxoxoxxxoxxo -Lizzz")
 
+#== written by kenny ==
   SpamType.create(name: "Kpop Recruiting" , template: "You have been selected to join boys transitioning to girls generation. Can you kimchi good? Lets have a good time and get some kbbq.")

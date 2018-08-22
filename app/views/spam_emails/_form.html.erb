@@ -24,10 +24,10 @@
     <%= form.label "Victim email" %>
     <%= form.text_field :victim_real_email %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :contents %>
-    <%= form.text_field :contents, value: @spam_type[:template]  %>
+    <%= form.text_area :contents, size: "100x35", value: @spam_type[:template]  %>
   </div>
 
 
