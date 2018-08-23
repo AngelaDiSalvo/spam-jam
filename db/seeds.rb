@@ -77,7 +77,7 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
     some hole in the ground
     222-2222-22-2222")
 
-  SpamType.create(name: "The Hookup Trap" , template: " Hey bb I thot ur cutexxx xoxoxo I am lonely please check out my insecurities here:<%= link_to 'Click For Pics!', url: 'spam-jam.herokuapp.com/bam' %> I wanna pour strawberry limeade all over you. let's talk mmmk xxxxoxoxoxxxoxoxxxoxxo -Lizzz")
+  SpamType.create(name: "The Hookup Trap" , template: " Hey bb I thot ur cutexxx xoxoxo I am lonely please check out my insucurities here:<%= link_to 'Click For Pics!', url: 'spam-jam.herokuapp.com/bam' %> I wanna pour strawberry limeade all over you. let's talk mmmk xxxxoxoxoxxxoxoxxxoxxo -Lizzz")
 
 #== written by kenny ==
   SpamType.create(name: "Kpop Recruiting" , template: "You have been selected to join boys transitioning to girls generation. Can you kimchi good? Lets have a good time and get some kbbq.")
