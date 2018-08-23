@@ -6,7 +6,6 @@
     <div class="container bg-transparent border-none" align="CENTER">
       <div class="card-body">
         <div class="card bg-danger mb-3">
-          <div class="card-header" align="CENTER">
             <h2>Form</h2>
             <%= form_with(model: spam_email, local: true, :html => {:class => "form-horizontal center"}) do |form| %>
               <% if spam_email.errors.any? %>
@@ -21,7 +20,6 @@
                 </div>
               <% end %>
 
-            </div>
             <br>
             <div class="card-body" align="CENTER">
 
@@ -54,11 +52,11 @@
 
 
           </div>
-          <div class="card-footer">
+
             <div class="actions">
               <%= form.submit %>
             </div>
-          </div>
+
           <% end %>
         </div>
       </div>
