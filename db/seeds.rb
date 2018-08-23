@@ -31,7 +31,7 @@ end
 SpamType.create(name: "Social Media Expert" , template:" Hey
   I am called Scott and I specialize in Social network engagement marketing which helps to increase business and can give your facebook page a wow factor. I've emailed you just to let you know I have some very special deals on currently which ust might interest you as a business.
 
-  <%= link_to 'See Offers!', url: 'spam-jam.herokuapp.com/bam' %>
+  <a href='spamjam.herokuapp.com/bam'>'See Offers!'</a>
   I help gain facebook likes and Twitter followers for business as a way to start increasing profits and immersion through social engagement. If a new client logs onto facebook or social media and sees that you have 23500000 likes over your competition's paltry 300, they will more likely throw money at you. This works for nearly any industry: Business, Marketing, Animation, Arson, Starving-Children, etc. As you can see by my credentials I'm 100% trustworthy and can make the changes your company needs. I will establish your brand as a trusted source.")
 
 SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
@@ -55,7 +55,7 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
 
     Oh yeah, CIA also has a hit out on you because they can't be one-up'ed by the FBI. There's no telling what might happen. Please wire money to Flatiron. The got hackers there that can help you out. Please see the following for more INFO
 
-    <%= link_to 'See Offers!', url: 'spam-jam.herokuapp.com/bam' %>
+    <a href='spamjam.herokuapp.com/bam'>'See Offers!'</a>
 
     You have 48 hours before the ninjas come get you.")
 
@@ -77,7 +77,7 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
     some hole in the ground
     222-2222-22-2222")
 
-  SpamType.create(name: "The Hookup Trap" , template: " Hey bb I thot ur cutexxx xoxoxo I am lonely please check out my insucurities here:<%= link_to 'Click For Pics!', url: 'spam-jam.herokuapp.com/bam' %> I wanna pour strawberry limeade all over you. let's talk mmmk xxxxoxoxoxxxoxoxxxoxxo -Lizzz")
+  SpamType.create(name: "The Hookup Trap" , template: " Hey bb I thot ur cutexxx xoxoxo I am lonely please check out my insucurities here: <a href='spamjam.herokuapp.com/bam'>'Click For Pics!'</a> I wanna pour strawberry limeade all over you. let's talk mmmk xxxxoxoxoxxxoxoxxxoxxo -Lizzz")
 
 #== written by kenny ==
   SpamType.create(name: "Kpop Recruiting" , template: "You have been selected to join boys transitioning to girls generation. Can you kimchi good? Lets have a good time and get some kbbq.")
