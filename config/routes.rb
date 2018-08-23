@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   get '/new/1', to: 'spam_emails#new1'
   get '/new/2', to: 'spam_emails#dog'
   post '/new/2', to: 'spam_emails#new'
-  get '/bam', to: 'victims#bam'
+  get '/bam', to: 'spam_emails#bam'
   get '/', to: 'spam_emails#welcome'
+  get '/confirm', to: 'spam_emails#confirm'
 
   resources :spam_emails, only: [:index, :show, :new, :create]
   # resources :fake_emails, only: [:index, :show]

@@ -23,6 +23,13 @@ class SpamEmailsController < ApplicationController
     render :new
   end
 
+  def confirm
+    render :confirm
+  end
+  def bam
+    render :bam
+  end
+
   def create
     @spam_type = SpamType.find(session[:spam_type_id])
     @user = User.create(name: params[:spam_email][:user_name], real_email: params[:spam_email][:user_real_email])
