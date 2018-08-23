@@ -1,35 +1,33 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Analytics</h1>
 
-<table>
-  <!-- <thead> -->
-    <!-- <tr>
-      <th>Contents</th>
-      <th>User</th>
-      <th>Victim</th>
-      <th>Spam Type</th>
-    </tr> -->
-  <!-- </thead> -->
+<div class="row">
+  <div class="col-6">
+  </div>
 
-  <tbody>
-    <!-- <% @spam_emails.each do |spam_email| %>
-      <tr>
-        <td><%= spam_email.contents[0..20] %></td>
-        <td><%= spam_email.user.name %></td>
-        <td><%= spam_email.victim.name %></td>
-        <td><%= spam_email.spam_type.name %></td>
-      </tr>
-    <% end %> -->
-  </tbody>
-</table>
-<br>
+  <div class="col-5">
+    <div class="container bg-transparent border-none" align="CENTER">
+      <div class="card-body">
+        <div class="card bg-danger mb-3">
+          <div class="card-body" align="CENTER">
+            <div class="container bg-transparent border-none">
+              <div class="actions">
+                <h1>Analytics</h1>
+                <p><font size="3">Favorite Spam Type: <%= @spam_emails.favorite_type[0].name %>
+                <br>
+                Times Sent: <%= @spam_emails.favorite_type[1] %></p>
+                <p>Total Emails Sent: <%= @spam_emails.total %></p>
+                <p>Saddest Victim: <%= @spam_emails.saddest[0].name %>
+                <br>
+                Emails Received:<%= @spam_emails.saddest[1] %></font></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p>Favorite Spam Type: <%= @spam_emails.favorite_type[0].name %>
-<br>
-Times Sent: <%= @spam_emails.favorite_type[1] %></p>
-<p>Total Emails Sent: <%= @spam_emails.total %></p>
+  <div class="col-1">
+  </div>
 
-<p>Saddest Victim: <%= @spam_emails.saddest[0].name %>
-<br>
-Emails Received:<%= @spam_emails.saddest[1] %></p>
+</div>
