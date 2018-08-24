@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2018_08_20_213221) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "fake_emails", force: :cascade do |t|
     t.string "email"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_fake_emails_on_user_id"
@@ -22,9 +25,9 @@ ActiveRecord::Schema.define(version: 2018_08_20_213221) do
 
   create_table "spam_emails", force: :cascade do |t|
     t.string "contents"
-    t.integer "user_id"
-    t.integer "victim_id"
-    t.integer "spam_type_id"
+    t.bigint "user_id"
+    t.bigint "victim_id"
+    t.bigint "spam_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["spam_type_id"], name: "index_spam_emails_on_spam_type_id"
@@ -53,4 +56,8 @@ ActiveRecord::Schema.define(version: 2018_08_20_213221) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "fake_emails", "users"
+  add_foreign_key "spam_emails", "spam_types"
+  add_foreign_key "spam_emails", "users"
+  add_foreign_key "spam_emails", "victims"
 end
