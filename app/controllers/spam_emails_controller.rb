@@ -47,8 +47,7 @@ class SpamEmailsController < ApplicationController
 
 
     respond_to do |format|
-      if @spam_email.valid? && @user.valid? && @victim.valid?
-
+      if @spam_email.valid? && @user.valid? && @victim.valid? &&verify_recaptcha(model: @spam_email)
         if !@num_emails.nil? #COME BACK HERE
           #do the thing multipunch
           SpamEmailMailer.multipunch(@num_emails,@victim,@spam_email,@user).deliver_now
