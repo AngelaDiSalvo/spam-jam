@@ -81,3 +81,19 @@ SpamType.create(name: "Lucky Winner" , template:" CONTRATULATIONS!!!
 
 #== written by kenny ==
   SpamType.create(name: "Kpop Recruiting" , template: "You have been selected to join boys transitioning to girls generation. Can you kimchi good? Lets have a good time and get some kbbq.")
+#== written by Cindy ==
+  SpamType.create(name: "Ugandan Prince" , template: "Hello Broda, I am King UsainBolt-Jankles de Knuckles XVII. I am contacting you on here because I want you to know da whey. Me and my bruddahz have gathered here to celebrate and honor our Queen Motha in all her glory. The wae to our Queen is through your bank account. *tongue clicks* please provide the following so we may follow da queen muddah to find da whey.
+
+    Bank ACCT Routing #
+    Full Name
+    Passport
+    meme library (if you do not hab dis, you do not know da whey)
+
+    you can provide all de information by following <a href='spamjam.herokuapp.com/bam'>dis whey</a>.
+
+  Our bruddahz thank you for your cooperation and da queen mutha shall lead us down the right whey. If you respond in time the queen muddah will gib you free toaster. Thank you, Bruddah.
+
+  -Knuckles
+  *tongue clicks**tongue clicks**tongue clicks**tongue clicks**tongue clicks**tongue clicks**tongue clicks*
+
+    ")
