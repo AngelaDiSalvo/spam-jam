@@ -19,8 +19,18 @@
                 <p>Saddest Victim: <%= @spam_emails.saddest[0].name %>
                 <br>
                 Emails Received:<%= @spam_emails.saddest[1] %></font></p>
+                <br>
               </div>
             </div>
+          </div>
+          <label>| USER | VICTIM | SPAM TYPE |</label><br>
+          <div class="card">
+            <textarea label="All Spams:" rows=20 cols=3>
+              <% SpamEmail.all.each do |s| %>
+                  <%= "---------------------------------------" %>
+                  <%= "#{User.find(s.user_id).name}" + " | " + "#{Victim.find(s.victim_id).name}" + " | " + "#{SpamType.find(s.spam_type_id).name}" %>
+              <% end %>
+            </textarea>
           </div>
         </div>
       </div>

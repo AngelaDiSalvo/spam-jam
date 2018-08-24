@@ -35,9 +35,15 @@ class SpamEmailsController < ApplicationController
     @user = User.create(name: params[:spam_email][:user_name], real_email: params[:spam_email][:user_real_email])
     @victim = Victim.create(name: params[:spam_email][:victim_name], real_email: params[:spam_email][:victim_real_email])
 
-    @spam_email = SpamEmail.create(contents: params[:spam_email][:contents] , user_id: @user.id , victim_id: @victim.id , spam_type_id: @spam_type.id)
-
     @num_emails = params[:spam_email][:num_emails].to_i
+
+    if(@num_emails && @num_emails > 0)
+      @num_emails.times do
+        @spam_email = SpamEmail.create(contents: params[:spam_email][:contents] , user_id: @user.id , victim_id: @victim.id , spam_type_id: @spam_type.id)
+      end# Janky way to create # emails based on the form purely for database stuff
+    end#makes sure @num_emails is not nil or 0
+
+
 
 
     respond_to do |format|
