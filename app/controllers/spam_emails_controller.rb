@@ -37,7 +37,7 @@ class SpamEmailsController < ApplicationController
 
     @num_emails = params[:spam_email][:num_emails].to_i
 
-    if(@num_emails && @num_emails > 0)
+    if(@num_emails && @num_emails > 0 && @num_emails <= 50)
       @num_emails.times do
         @spam_email = SpamEmail.create(contents: params[:spam_email][:contents] , user_id: @user.id , victim_id: @victim.id , spam_type_id: @spam_type.id)
       end# Janky way to create # emails based on the form purely for database stuff

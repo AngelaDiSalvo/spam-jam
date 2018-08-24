@@ -48,7 +48,7 @@
 
                 <div class="form-group">
                   <%= form.label "# of emails"%>
-                  <%= form.number_field :num_emails, class: "form-control" %>
+                  <%= form.number_field :num_emails, in: 1..50, step: 1, value: 1, class: "form-control" %>
                 </div>
 
                 <div class="actions">
